@@ -56,8 +56,9 @@ if (process.env.NODE_ENV === 'development') {
             }
         }
     });
-    if (process.env.isHTTPAuthForSwagger) {
-        app.get("/docs", auth, (req, res, next) => {
+    if  (process.env.isHTTPAuthForSwagger) {
+        app.get
+        ("/docs", auth, (req, res, next) => {
             next();
         });
     }
