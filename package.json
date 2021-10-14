@@ -16,7 +16,10 @@
     }
   },
   "lint-staged": {
-    "*": "prettier --write"
+    "*": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "author": "Amit Saha",
   "license": "MIT",
@@ -38,7 +41,8 @@
   },
   "devDependencies": {
     "cross-env": "^7.0.3",
-    "husky": "^7.0.2",
+    "husky": "^4.3.8",
+    "lint-staged": "^11.2.3",
     "nodemon": "^2.0.12",
     "prettier": "^2.4.1"
   }
