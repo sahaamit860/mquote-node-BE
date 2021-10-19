@@ -78,7 +78,9 @@ if (process.env.NODE_ENV === "development") {
   app.use("/docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument, options));
 }
 
-app.use("/", main);
+app.use(express.json());
+
+app.use("/api", main);
 app.use(express.static(path.join(__dirname, "public")));
 
 app.listen(
